@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: hsl(216, 100%, 50%);
     color: white;
     padding: 10px 0;
 }
@@ -14,17 +14,34 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
     display: inline;
     margin: 0 10px;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: gray;
+    border-radius: 5px;
 }
 
 main {
@@ -45,14 +62,15 @@ main {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background: #4CAF50;
+    background: hsl(216, 100%, 50%);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: #45a049;
+    background: gray;
 }
 
 section {
@@ -63,7 +81,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#weatherTrend, #weatherRadar {
+#weatherTrend, #weatherRadar, #weatherWarnings {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -79,7 +97,27 @@ section {
     animation: fadeIn 1s ease-in-out;
 }
 
+.weatherWarning {
+    background: #e23633;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+.weatherHour {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
