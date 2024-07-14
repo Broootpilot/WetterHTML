@@ -10,9 +10,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#trend">7 Tage Trend</a></li>
-                <li><a href="#radar">Regenradar</a></li>
-                <li><a href="#info">Informationen</a></li>
+                <li><a href="#trend"><i class="fa-solid fa-arrow-trend-up"></i> 7 Tage Trend</a></li>
+                <li><a href="#radar"><i class="fa-solid fa-satellite-dish"></i> Regenradar</a></li>
+                <li><a href="#warnings"><i class="fa-solid fa-triangle-exclamation"></i> Warnungen</a></li>
+                <li><a href="#info"><i class="fa-solid fa-info"></i> Informationen</a></li>
+                <li><a href="https://github.com/Broootpilot/WetterHTML"><i class="fa-brands fa-github"></i> Github</a></li>
             </ul>
         </nav>
     </header>
@@ -20,24 +22,38 @@
         <section id="search">
             <h1>Wetter für Ihre Stadt</h1>
             <input type="text" id="cityInput" placeholder="Stadt eingeben">
-            <button onclick="getWeather()">Suche</button>
+            <button onclick="getWeatherByCity()">Suche</button>
+        </section>
+        <section id="currentLocation">
+            <h2><i class="fa-solid fa-location-dot"></i> Aktueller Standort</h2>
+            <p id="locationName">Lade Standort...</p>
         </section>
         <section id="trend">
-            <h2>7 Tage Trend</h2>
-            <div id="weatherTrend"></div>
+            <h2><i class="fa-solid fa-arrow-trend-up"></i> 7 Tage Trend</h2>
+            <div id="weatherTrend">Lade Daten...</div>
         </section>
+        <section id="hourly">
+            <h2>Stündliche Vorhersage</h2>
+            <div id="hourlyForecast"></div>
+        </section>
+        
         <section id="radar">
-            <h2>Regenradar</h2>
-            <div id="weatherRadar"></div>
+            <h2><i class="fa-solid fa-satellite-dish"></i> Regenradar</h2>
+            <div id="weatherRadar">Lade Daten...</div>
+        </section>
+        <section id="warnings">
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> Sturm- und Unwetterwarnungen</h2>
+            <div id="weatherWarnings">Lade Warnungen...</div>
         </section>
         <section id="info">
-            <h2>Informationen</h2>
-            <p>Hier können allgemeine Wetterinformationen stehen.</p>
+            <h2><i class="fa-solid fa-info"></i> Informationen</h2>
+            <p></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Wetter Website</p>
+        <p>&copy; 2024 Wetter Website by Brotpilot / Olli</p>
     </footer>
+    <script src="https://kit.fontawesome.com/04f1e799f7.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
