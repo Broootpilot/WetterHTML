@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetter Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#trend">7 Tage Trend</a></li>
+                <li><a href="#radar">Regenradar</a></li>
+                <li><a href="#info">Informationen</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search">
+            <h1>Wetter für Ihre Stadt</h1>
+            <input type="text" id="cityInput" placeholder="Stadt eingeben">
+            <button onclick="getWeather()">Suche</button>
+        </section>
+        <section id="trend">
+            <h2>7 Tage Trend</h2>
+            <div id="weatherTrend"></div>
+        </section>
+        <section id="radar">
+            <h2>Regenradar</h2>
+            <div id="weatherRadar"></div>
+        </section>
+        <section id="info">
+            <h2>Informationen</h2>
+            <p>Hier können allgemeine Wetterinformationen stehen.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Wetter Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
